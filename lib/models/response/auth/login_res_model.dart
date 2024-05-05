@@ -7,11 +7,13 @@ class LoginResponseModel {
     final String profile;
     final String userToken;
     final String uid;
+    final bool isAgent;
     final String username;
 
     LoginResponseModel({
         required this.id,
         required this.profile,
+        required this.isAgent,
         required this.userToken,
         required this.uid,
         required this.username,
@@ -21,6 +23,7 @@ class LoginResponseModel {
         id: json["_id"],
         profile: json["profile"],
         userToken: json["userToken"],
+        isAgent: json["isAgent"],
         uid: json["uid"],
         username: json["username"],
     );

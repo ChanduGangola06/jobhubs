@@ -8,16 +8,18 @@ import 'package:jobhubs/providers/onboarding_provider.dart';
 import 'package:jobhubs/providers/profile_provider.dart';
 import 'package:jobhubs/providers/signup_provider.dart';
 import 'package:jobhubs/providers/zoom_provider.dart';
+import 'package:jobhubs/utils/app_bindings.dart';
+import 'package:jobhubs/views/screens/onboarding/onboarding_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:jobhubs/constants/app_constants.dart';
-// import 'package:firebase_core/firebase_core.dart';
-// import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     MultiProvider(
       providers: [
@@ -54,6 +56,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.grey,
             useMaterial3: true,
           ),
+          initialBinding: AppBindings(context: context),
+          home: const OnboardingScreen(),
         );
       },
     );

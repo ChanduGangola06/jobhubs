@@ -18,7 +18,7 @@ class GetJobRes {
         required this.requirements,
         required this.imageUrl,
         required this.agentId,
-        required this.updatedAt,
+        // required this.updatedAt,
     });
 
     final String id;
@@ -33,7 +33,7 @@ class GetJobRes {
     final List<String> requirements;
     final String imageUrl;
     final String agentId;
-    final DateTime updatedAt;
+    // final DateTime updatedAt;
 
     factory GetJobRes.fromJson(Map<String, dynamic> json) => GetJobRes(
         id: json["_id"],
@@ -48,7 +48,7 @@ class GetJobRes {
         requirements: List<String>.from(json["requirements"].map((x) => x)),
         imageUrl: json["imageUrl"],
         agentId: json["agentId"],
-        updatedAt: DateTime.parse(json["updatedAt"]),
+        // updatedAt: DateTime.parse(json["updatedAt"]),
     );
 
     Map<String, dynamic> toJson() => {
@@ -64,6 +64,6 @@ class GetJobRes {
         "requirements": List<dynamic>.from(requirements.map((x) => x)),
         "imageUrl": imageUrl,
         "agentId": agentId,
-        "updatedAt": updatedAt.toIso8601String(),
+        // "updatedAt": updatedAt.toIso8601String(),
     };
 }

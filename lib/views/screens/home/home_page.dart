@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:jobhubs/constants/app_constants.dart';
+import 'package:jobhubs/providers/login_provider.dart';
+import 'package:jobhubs/providers/zoom_provider.dart';
 import 'package:jobhubs/views/common/app_style.dart';
 import 'package:jobhubs/views/common/drawer/drawer_widget.dart';
 import 'package:jobhubs/views/common/heading_widget.dart';
 import 'package:jobhubs/views/common/search.dart';
 import 'package:jobhubs/views/screens/auth/profile_page.dart';
+import 'package:jobhubs/views/screens/jobs/widgets/popular_jobs.dart';
+import 'package:provider/provider.dart';
 
 import '../../common/app_bar.dart';
 
@@ -67,6 +71,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 30.h),
                 const HeadingWidget(text: 'Popular Jobs'),
+                SizedBox(height: 15.h),
+                const PopularJobs(),
                 SizedBox(height: 15.h),
                 const HeadingWidget(text: 'Recently Posted ')
               ],
