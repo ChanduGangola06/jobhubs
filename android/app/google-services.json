@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "553462955718",
+    "project_id": "jobshub-fbd60",
+    "storage_bucket": "jobshub-fbd60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553462955718:android:5db8b1bf68fe1741fde1c7",
+        "android_client_info": {
+          "package_name": "com.admin.jobhubs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf29PGPz32VS7qO-Pq5lmG4L83XkakH-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
